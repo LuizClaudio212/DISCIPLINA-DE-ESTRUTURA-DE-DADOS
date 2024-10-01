@@ -1,4 +1,6 @@
 from excecao import *
+
+
 class PilhaArray:
     
     def __init__(self):
