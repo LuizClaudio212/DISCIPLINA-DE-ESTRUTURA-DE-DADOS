@@ -67,3 +67,7 @@ class FilaArray:
       posicao = (1 + posicao) % len(self._dados)
     result += f'] tamanho: {len(self)} capacidade {len(self._dados)}\n'
     return result
+  
+  
+  
+  
