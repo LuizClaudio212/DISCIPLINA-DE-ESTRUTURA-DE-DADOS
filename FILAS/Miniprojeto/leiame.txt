@@ -1,0 +1,19 @@
+Alunos: Luiz Claudio Vieira da Silva Junior, José Gouveia da Silva Neto, Mateus Alves dos Santos
+
+Discussão sobre o desempenho das funções implementadas na Fila:
+
+Diante das necessidades de implementação para que fosse possível aplicar as novas demandas de operação do código, algumas operações como os métodos Add, Remove e Contains apresentam um desempenho de O(n) no que concerne às alterações feitas para que se mantivesse uma fila circular.
+
+O método Contains: A mudança de complexidade do código foi modificada devido a implementação desse novo método, visto que é necessária a realização de um laço para realizar a checagem da presença do elemento que será inserido/removido na fila em questão, a função retornará ‘True’ em caso positivo ou ‘False’ em caso negativo. Dessa forma utilizamos desse valor booleano para checagem no método Add, para que, caso o elemento fosse encontrado na fila, ele não fosse adicionado novamente e apresentasse uma mensagem de informação. Por outro lado, no método Remove, caso o elemento não fosse encontrado na fila, deveria informar que esse dado não está presente na fila.
+
+Limitações: O uso de laços (for loops) em Contains, Add, e Remove pode resultar em desempenho não ideal em situações de grandes conjuntos de dados devido à complexidade O(n).
+
+Em relação a futuras melhorias, uma abordagem promissora que vimos mencionada em algumas literaturas e artigos é o uso de sets. Os sets podem oferecer buscas e verificações de elementos em tempo constante, O(1), o que tornaria as operações de inserção e remoção muito mais eficientes.
+
+Embora tenhamos lido sobre as vantagens de usar sets para otimizar essas operações, ainda não conseguimos implementá-los no contexto da fila circular. Uma implementação efetiva exigiria uma compreensão mais profunda de como integrar conjuntos com a estrutura circular de maneira eficiente, mantendo a integridade e o comportamento esperado da fila.
+
+A implementação da mesma poderia melhorar significativamente o desempenho das operações em grandes conjuntos de dados.
+
+Grande parte da implementação e da leitura sobre sets foram tiradas do proprio docs do python.org segue os links:
+https://docs.python.org/pt-br/3/tutorial/datastructures.html
+https://docs.python.org/pt-br/3/library/stdtypes.html#set-types-set-frozenset
