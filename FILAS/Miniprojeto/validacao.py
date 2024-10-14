@@ -18,6 +18,10 @@ def test_add_duplicate_elements():
         set_queue.add(2)  # Deve lançar ja_existe
     except ja_existe:
         pass
+    try: 
+        set_queue.add(3)
+    except ja_existe:
+        pass
     assert set_queue.list() == [1, 2, 3], "Erro: Esperado [1, 2, 3]"
 
 def test_remove_existing_element():
